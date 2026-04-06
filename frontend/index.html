@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MetaCraft AI — Indian Scripts & Music Generator</title>
+  <meta name="description"
+    content="AI-powered creative script generator for Indian languages. Generate TV ads, radio spots, social media reels in Hindi, Tamil, Telugu, Bengali and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <!-- Animated background -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <i data-lucide="clapperboard" class="logo-icon"></i>
+        <div>
+          <span class="logo-title">MetaCraft AI</span>
+          <span class="logo-sub">Creative Engine</span>
+        </div>
+      </div>
+      <div class="header-status" id="headerStatus">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">Checking model...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="hero">
+      <div class="hero-badge">Professional Grade · Powered by Qwen2.5</div>
+      <h1 class="hero-title">Create Scripts & Music in<br /><span class="gradient-text">Indian Languages</span></h1>
+      <p class="hero-desc">Generate professional ad scripts & Indian music briefs — Hindi, Tamil, Telugu, Bengali,
+        Marathi & more.</p>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="tab-nav">
+      <button class="tab-btn active" data-tab="scripts" onclick="switchTab('scripts')">
+        <i data-lucide="file-text" class="icon-sm"></i> Scripts
+      </button>
+      <button class="tab-btn" data-tab="music" onclick="switchTab('music')">
+        <i data-lucide="music" class="icon-sm"></i> Music
+      </button>
+    </div>
+
+    <!-- Scripts Tab -->
+    <div class="content-grid tab-content" id="tabScripts">
+      <!-- Form Card -->
+      <div class="card form-card">
+        <h2 class="card-title">Script Parameters</h2>
+
+        <!-- Language Selector -->
+        <div class="form-section">
+          <label class="form-label">Target Language</label>
+          <div class="language-grid" id="languageGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Ad Format -->
+        <div class="form-section">
+          <label class="form-label">Placement Format</label>
+          <div class="format-grid" id="formatGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Brand & Theme -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="brandName">Brand Name</label>
+            <input type="text" id="brandName" class="form-input" placeholder="e.g. Jio, Amul, Flipkart" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="theme">Creative Theme</label>
+            <input type="text" id="theme" class="form-input" placeholder="e.g. family bonding at Diwali" />
+          </div>
+        </div>
+
+        <!-- Industry & Tone -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="industry">Industry Vertical</label>
+            <select id="industry" class="form-select">
+              <option value="telecom">Telecom</option>
+              <option value="fmcg" selected>FMCG</option>
+              <option value="fintech">Fintech</option>
+              <option value="ecommerce">E-Commerce</option>
+              <option value="jewellery">Jewellery</option>
+              <option value="real_estate">Real Estate</option>
+              <option value="food_beverage">Food & Beverage</option>
+              <option value="education">Education</option>
+              <option value="fashion">Fashion</option>
+              <option value="automobile">Automobile</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="tone">Brand Voice</label>
+            <select id="tone" class="form-select">
+              <option value="emotional" selected>Emotional</option>
+              <option value="energetic">Energetic</option>
+              <option value="humorous">Humorous</option>
+              <option value="inspirational">Inspirational</option>
+              <option value="elegant">Elegant</option>
+              <option value="informative">Informative</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Festival & Advanced -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="festival">Cultural Context</label>
+            <select id="festival" class="form-select">
+              <option value="none">Standard context</option>
+              <option value="diwali">Diwali</option>
+              <option value="holi">Holi</option>
+              <option value="eid">Eid</option>
+              <option value="christmas">Christmas</option>
+              <option value="onam">Onam</option>
+              <option value="pongal">Pongal</option>
+              <option value="navratri">Navratri / Durga Puja</option>
+              <option value="independence_day">Independence Day</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="usp">Value Proposition</label>
+            <input type="text" id="usp" class="form-input" placeholder="e.g. Fastest 5G network" />
+          </div>
+        </div>
+
+        <!-- Target Audience -->
+        <div class="form-group">
+          <label class="form-label" for="targetAudience">Target Demographic</label>
+          <input type="text" id="targetAudience" class="form-input"
+            placeholder="e.g. young urban professionals aged 25-35" />
+        </div>
+
+        <!-- Product Description -->
+        <div class="form-group">
+          <label class="form-label" for="productDescription">Product Specifications</label>
+          <textarea id="productDescription" class="form-input" rows="3"
+            placeholder="Describe your product or service — e.g. A premium organic honey sourced from Himalayan forests, available in 250g and 500g jars, priced at ₹349"></textarea>
+        </div>
+
+        <!-- Generate Button -->
+        <button class="btn-generate" id="generateBtn" onclick="generateScript()">
+          <i data-lucide="sparkles" class="btn-icon"></i>
+          <span class="btn-text">Generate Script</span>
+        </button>
+      </div>
+
+      <!-- Output Card -->
+      <div class="card output-card">
+        <div class="output-empty" id="outputEmpty">
+          <i data-lucide="layout" class="empty-icon"></i>
+          <p class="empty-title">Your script will appear here</p>
+          <p class="empty-desc">Fill in the brief on the left and click Generate Script to create a professional Indian
+            language advertisement.</p>
+          <div class="sample-langs">
+            <span>हिन्दी</span><span>தமிழ்</span><span>తెలుగు</span>
+            <span>বাংলা</span><span>ਪੰਜਾਬੀ</span><span>മലയാളം</span>
+          </div>
+        </div>
+
+        <!-- Loading State -->
+        <div class="output-loading" id="outputLoading" style="display:none">
+          <div class="loading-spinner"></div>
+          <p class="loading-title">Generating your script...</p>
+          <p class="loading-desc" id="loadingDesc">Qwen2.5 is crafting your script in <span
+              id="loadingLang">Hindi</span></p>
+          <div class="loading-steps" id="loadingSteps">
+            <div class="step active" id="step1">Analyzing context</div>
+            <div class="step" id="step2">Developing content</div>
+            <div class="step" id="step3">Refining linguistic nuances</div>
+            <div class="step" id="step4">Finalizing output</div>
+          </div>
+        </div>
+
+        <!-- Script Result -->
+        <div class="output-result" id="outputResult" style="display:none">
+          <div class="result-header">
+            <div class="result-meta">
+              <span class="result-lang" id="resultLang"></span>
+              <span class="result-format" id="resultFormat"></span>
+              <span class="result-duration" id="resultDuration"></span>
+            </div>
+            <button class="btn-copy" id="copyBtn" onclick="copyScript()">
+              <i data-lucide="copy" class="icon-sm"></i> Copy
+            </button>
+          </div>
+          <h3 class="result-title" id="resultTitle"></h3>
+          <div class="script-output" id="scriptOutput"></div>
+          <div class="result-footer">
+            <span class="model-badge" id="modelBadge"></span>
+            <span class="gen-time" id="genTime"></span>
+          </div>
+        </div>
+
+        <!-- Error State -->
+        <div class="output-error" id="outputError" style="display:none">
+          <i data-lucide="alert-circle" class="error-icon"></i>
+          <p class="error-title">Generation Failed</p>
+          <p class="error-msg" id="errorMsg"></p>
+          <div class="error-help">
+            <p><strong>Steps to fix:</strong></p>
+            <ol>
+              <li>Make sure Ollama is installed from <a href="https://ollama.com/download"
+                  target="_blank">ollama.com</a></li>
+              <li>Open terminal and run: <code>ollama pull qwen2.5:3b</code></li>
+              <li>Start Ollama and try again</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Music Tab -->
+    <div class="content-grid tab-content" id="tabMusic" style="display:none">
+      <!-- Music Form Card -->
+      <div class="card form-card">
+        <h2 class="card-title">🎵 Music Composer</h2>
+
+        <!-- Fusion Style Selector -->
+        <div class="form-section">
+          <label class="form-label">🎧 Fusion Style</label>
+          <div class="language-grid" id="fusionGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Brand & Theme -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="musicBrand">🏢 Brand Name</label>
+            <input type="text" id="musicBrand" class="form-input" placeholder="e.g. Jio, Amul" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="musicTheme">💡 Music Theme</label>
+            <input type="text" id="musicTheme" class="form-input" placeholder="e.g. festive celebration" />
+          </div>
+        </div>
+
+        <!-- Industry & Tone -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="musicIndustry">🏭 Industry</label>
+            <select id="musicIndustry" class="form-select">
+              <option value="telecom">📡 Telecom</option>
+              <option value="fmcg" selected>🛒 FMCG</option>
+              <option value="fintech">💰 Fintech</option>
+              <option value="ecommerce">🛍️ E-Commerce</option>
+              <option value="jewellery">💎 Jewellery</option>
+              <option value="real_estate">🏠 Real Estate</option>
+              <option value="food_beverage">🍜 Food & Beverage</option>
+              <option value="education">📚 Education</option>
+              <option value="fashion">👗 Fashion</option>
+              <option value="automobile">🚗 Automobile</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="musicTone">🎭 Mood</label>
+            <select id="musicTone" class="form-select">
+              <option value="emotional" selected>💞 Emotional</option>
+              <option value="energetic">⚡ Energetic</option>
+              <option value="humorous">😄 Humorous</option>
+              <option value="inspirational">🚀 Inspirational</option>
+              <option value="elegant">✨ Elegant</option>
+              <option value="informative">ℹ️ Informative</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Format & Festival -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="musicFormat">Ad Placement</label>
+            <select id="musicFormat" class="form-select">
+              <option value="tv_ad_30" selected>TV Ad (30s)</option>
+              <option value="tv_ad_60">TV Ad (60s)</option>
+              <option value="radio_spot">Radio Spot (30s)</option>
+              <option value="social_reel">Social Reel (15-30s)</option>
+              <option value="ott_preroll">OTT Pre-roll (15s)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="musicFestival">🪔 Festival</label>
+            <select id="musicFestival" class="form-select">
+              <option value="none">No Festival</option>
+              <option value="diwali">🪔 Diwali</option>
+              <option value="holi">🎨 Holi</option>
+              <option value="eid">🌙 Eid</option>
+              <option value="onam">🌺 Onam</option>
+              <option value="pongal">🌾 Pongal</option>
+              <option value="navratri">💃 Navratri</option>
+              <option value="independence_day">🇮🇳 Independence Day</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- BPM Slider -->
+        <div class="form-group">
+          <label class="form-label" for="musicBpm">Production Tempo: <span id="bpmValue">100</span> BPM</label>
+          <input type="range" id="musicBpm" class="form-range" min="60" max="160" value="100"
+            oninput="document.getElementById('bpmValue').textContent=this.value" />
+        </div>
+
+        <!-- Duration -->
+        <div class="form-group">
+          <label class="form-label" for="musicDuration">Total Duration</label>
+          <select id="musicDuration" class="form-select">
+            <option value="15">15 seconds</option>
+            <option value="30" selected>30 seconds</option>
+            <option value="45">45 seconds</option>
+            <option value="60">60 seconds</option>
+          </select>
+        </div>
+
+        <!-- Play / Stop Buttons -->
+        <div class="form-row">
+          <button class="btn-generate" id="musicBriefBtn" onclick="generateMusicBrief()" style="flex:1">
+            <i data-lucide="file-text" class="btn-icon"></i>
+            <span class="btn-text">Generate Brief</span>
+          </button>
+          <button class="btn-generate" id="musicPlayBtn" onclick="playMusic()"
+            style="flex:1; background: var(--success); border-color: #059669">
+            <i data-lucide="play" class="btn-icon"></i>
+            <span class="btn-text">Begin Playback</span>
+          </button>
+        </div>
+        <button class="btn-stop" id="musicStopBtn" onclick="stopMusic()" style="display:none; width: 100%">
+          <i data-lucide="square" class="btn-icon"></i>
+          <span>Stop Playback</span>
+        </button>
+      </div>
+
+      <!-- Music Player Card -->
+      <div class="card output-card">
+        <div class="output-empty" id="musicOutputEmpty">
+          <i data-lucide="music-2" class="empty-icon"></i>
+          <p class="empty-title">Indian Music Player</p>
+          <p class="empty-desc">Select a raga, fusion style, and mood — then hit Play to hear AI-generated Indian music
+            right in your browser.</p>
+          <div class="sample-langs">
+            <span>🎸 Sitar</span><span>🥁 Tabla</span><span>🎵 Bansuri</span>
+            <span>✨ Santoor</span><span>🎻 Sarangi</span><span>🪘 Mridangam</span>
+          </div>
+        </div>
+
+        <!-- Now Playing -->
+        <div class="music-player" id="musicPlayer" style="display:none">
+          <div class="player-header">
+            <div class="player-now-playing">
+              <span class="now-playing-dot"></span>
+              <span id="playerStatus">Now Playing</span>
+            </div>
+            <div class="player-volume">
+              <i data-lucide="volume-2" class="icon-sm"></i>
+              <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="70"
+                oninput="setMusicVolume(this.value)" />
+            </div>
+          </div>
+
+          <h3 class="player-title" id="playerTitle">🎵 Raga Yaman — Classical Electronic</h3>
+
+          <div class="player-meta">
+            <span class="result-lang" id="playerRaga"></span>
+            <span class="result-format" id="playerFusion"></span>
+            <span class="result-duration" id="playerBpm"></span>
+          </div>
+
+          <div class="player-instruments" id="playerInstruments"></div>
+
+          <!-- Waveform Visualizer -->
+          <canvas id="waveformCanvas" class="waveform-canvas" width="600" height="120"></canvas>
+
+          <!-- Progress Bar -->
+          <div class="player-progress">
+            <span class="progress-time" id="progressTime">0:00</span>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span class="progress-time" id="progressTotal">0:30</span>
+          </div>
+
+          <!-- Layer Indicators -->
+          <div class="player-layers">
+            <div class="layer-chip active" id="layerTanpura">Tanpura</div>
+            <div class="layer-chip active" id="layerMelody">Melody</div>
+            <div class="layer-chip" id="layerTabla">Table</div>
+            <div class="layer-chip" id="layerBeat">Percussion</div>
+            <div class="layer-chip active" id="layerPad">Ambience</div>
+          </div>
+
+          <!-- Music Brief Result (Hidden by default) -->
+          <div id="briefResult"
+            style="display:none; margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px;">
+            <div class="result-header">
+              <span class="result-lang" style="background: rgba(251,191,36,0.1); color: #fbbf24">Professional
+                Brief</span>
+              <button class="btn-copy" id="copyBriefBtn" onclick="copyMusicBrief()">
+                <i data-lucide="copy" class="icon-sm"></i> Copy Brief
+              </button>
+            </div>
+            <div class="script-output" id="briefOutput"
+              style="font-size: 0.95rem; line-height: 1.6; white-space: pre-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Language showcase -->
+    <div class="lang-showcase">
+      <h3 class="showcase-title">Supported Indian Languages</h3>
+      <div class="showcase-grid" id="showcaseGrid"></div>
+    </div>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="/static/music-engine.js"></script>
+  <script src="/static/app.js"></script>
+  <script>
+    // Initialize Lucide after page load
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+
+</html>

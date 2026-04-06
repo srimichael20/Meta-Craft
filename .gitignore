@@ -1,0 +1,8 @@
+.env
+.env.example
+qwen2-1.5b.Q4_K_M.gguf
+qwen2-1.5b.Q4_K_M.gguf
+blobs/
+*.bin
+*.pt
+*.gguf

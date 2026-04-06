@@ -1,0 +1,50 @@
+[
+    {
+        "instruction": "Brand: Nike | Format: TV Ad 60 sec | Industry: Sports | Theme: Cricket Street to Stadium | Tone: Inspiring",
+        "response": {
+            "Campaign": "Nike - Bleed Blue, Sweat Gold",
+            "Format": "Visual/Audio/Dialogue",
+            "Content": "[0:00 - 0:05]\nVisual: Extreme close-up of a worn-out tennis ball hitting a puddle in a Mumbai gully. Slow-motion splash.\nAudio: Heavy breathing. Distant city honking fades into a rhythmic heartbeat.\nDialogue: (Voiceover) \"Inga start aana...\" (It starts here...)\n\n[0:05 - 0:15]\nVisual: Quick cuts—A boy bowling in the rain. A girl hitting a six over a vegetable cart. Dust rising. Sweat dripping.\nAudio: The heartbeat syncs with a 'Thavil' drum beat. Growing louder.\nDialogue: \"...Gully kaura, Stadium-a maarum.\" (The gully noise turns into a stadium roar)\n\n[0:15 - 0:25]\nVisual: Transition match cut—The boy's worn sneaker transforms into a gleaming Nike spike shoe landing on a professional turf.\nAudio: Silence. Then—CRACK of the bat. Deafening crowd cheer erupts.\nDialogue: \"Verum kanavu illa. Idhu veri.\" (It's not just a dream. It's obsession.)\n\n[0:25 - 0:30]\nVisual: The girl, now an India team player, looks at the camera. Intense stare. She sprints.\nAudio: Bass drop. High energy hip-hop track begins.\nDialogue: \"Just Do It.\"\n\n[End Specification]\nVisual: Nike Swoosh on a cricket pitch.\nDialogue: \"Nike. Greatness comes from the streets.\""
+        }
+    },
+    {
+        "instruction": "Brand: Royal Enfield | Format: TV Ad 45 sec | Industry: Automobile | Theme: Himalayas | Tone: Rugged",
+        "response": {
+            "Campaign": "Royal Enfield - Soul of the Mountains",
+            "Format": "Visual/Audio/Dialogue",
+            "Content": "[0:00 - 0:10]\nVisual: Wide drone shot of the Spiti Valley. Barren, majestic mountains. A single speck moves on the winding road.\nAudio: Wind howling. The distinct 'Thump-Thump-Thump' of the Enfield engine cuts through.\nDialogue: (Inner Monologue) \"Pahad bulate hain... par sirf unhe jo sun sakte hain.\" (The mountains call... but only to those who listen.)\n\n[0:10 - 0:20]\nVisual: Close-up on the rider's gloved hand accelerating. Mud splashes on the visor. Crossing a freezing river stream.\nAudio: Splash sound. Engine revs harder. Guitar riff (Western styles) kicks in.\nDialogue: \"Yahan koi cellular network nahi. Sirf connection hai... khud se.\"\n\n[0:20 - 0:30]\nVisual: The bike halts at a prayer flag post. Rider takes off helmet. It's a woman. She breathes in the cold air.\nAudio: Music mellows down. Prayer flags fluttering sound.\nDialogue: \"Made like a gun. Goes like a bullet.\"\n\n[0:30 - 0:35]\nVisual: She kicks the starter. The thump returns. Fade to black.\nAudio: Thump... Thump... Thump...\nDialogue: \"Royal Enfield. Leh, Ladakh, Life.\""
+        }
+    },
+    {
+        "instruction": "Brand: Surf Excel | Format: TV Ad 45 sec | Industry: FMCG | Theme: Daag Acche Hain | Tone: Emotional",
+        "response": {
+            "Campaign": "Surf Excel - Neki Ka Rang",
+            "Format": "Visual/Audio/Dialogue",
+            "Content": "[0:00 - 0:10]\nVisual: A pristine white school uniform. A little boy sees a puppy stuck in a muddy ditch.\nAudio: Soft piano melody. Whimpering sounds of the puppy.\nDialogue: (Boy to Friend) \"Are ruk, woh darr gaya hai.\"\n\n[0:10 - 0:20]\nVisual: Without hesitation, the boy slides into the ditch. Mud splatters all over his white shirt. He lifts the puppy out.\nAudio: Uplifting orchestral swell.\nDialogue: (Puppy barks happily). (Boy laughs) \"Chal, bhaag ab!\"\n\n[0:20 - 0:30]\nVisual: Boy returns to his mother, covered in mud. Mother looks stern, then sees the puppy wagging its tail nearby.\nAudio: Music pauses. Silence.\nDialogue: \"Mamma... woh...\"\n\n[0:30 - 0:40]\nVisual: Mother smiles and wipes mud off his cheek.\nAudio: Surf Excel signature jingle tune.\nDialogue: (Mother) \"Agar kuch achha karne mein daag lagte hain... toh daag achhe hain.\"\n\n[End Specification]\nVisual: Product shot against white background.\nDialogue: \"Surf Excel. Daag Acche Hain.\""
+        }
+    },
+    {
+        "instruction": "Brand: Paper Boat | Format: Social Media Reel | Industry: Beverage | Theme: Nostalgia | Tone: Warm",
+        "response": {
+            "Campaign": "Paper Boat - Bachpan Wapas",
+            "Format": "Visual/Audio/Dialogue",
+            "Content": "[0:00 - 0:05]\nVisual: Split screen. Left: 1998 (Grainy filter), Kids pushing a tyre with a stick. Right: 2025 (HD), Guy in a suit stuck in traffic.\nAudio: Left: Street noise, laughter. Right: AC hum, horns.\nDialogue: \"Yaad hai woh race? Jahan finish line nahi, bas masti thi.\"\n\n[0:05 - 0:12]\nVisual: The guy in the car opens a pack of Paper Boat Aamras. He takes a sip. His eyes close.\nAudio: Sound of a suction pop. Glug... glug...\nDialogue: (Internal) \"Swaad wahi...\"\n\n[0:12 - 0:15]\nVisual: Flashback. He is a kid again, juice dripping down his chin, smiling with mango in hand.\nAudio: Sound of a cycle bell 'Trin Trin'.\nDialogue: \"...yaadein nai.\"\n\n[End Specification]\nVisual: Paper Boat pack with a paper boat animation floating nearby.\nDialogue: \"Paper Boat. Drinks and Memories.\""
+        }
+    },
+    {
+        "instruction": "Brand: Tanishq | Format: TV Ad 40 sec | Industry: Jewellery | Theme: Modern Wedding | Tone: Progressive",
+        "response": {
+            "Campaign": "Tanishq - Rivah",
+            "Format": "Visual/Audio/Dialogue",
+            "Content": "[0:00 - 0:10]\nVisual: A beautiful Tamil wedding mandap logic. The bride is sitting. Her father is hesitant to perform the 'Kanyadaan' (giving away).\nAudio: Traditional Nadaswaram, but played slowly. Emotional silence.\nDialogue: (Father) \"Naan epdi unna 'daan' panna mudiyum? Nee en ponnu.\"\n\n[0:10 - 0:20]\nVisual: The bride holds her father's hand. She looks confident.\nAudio: Soft violin entry.\nDialogue: (Bride) \"Appa, neenga enna kudukkavenaam. Just aashirvad pannunga.\"\n\n[0:20 - 0:30]\nVisual: The groom smiles and holds out his hand, not to take her, but to hold hers. They walk around the fire together.\nAudio: Music turns celebratory and grand.\nDialogue: (Narrator) \"Traditions change. Love remains.\"\n\n[End Specification]\nVisual: Tanishq Rivah Logo.\nDialogue: \"Tanishq Rivah. For the modern bride.\""
+        }
+    },
+    {
+        "instruction": "Brand: Manyavar | Format: TV Ad 30 sec | Industry: Fashion | Theme: Diwali | Tone: Celebratory",
+        "response": {
+            "Campaign": "Manyavar - Diwali Wali Feeling",
+            "Format": "Visual/Audio/Dialogue",
+            "Content": "[0:00 - 0:05]\nVisual: A guy in a t-shirt and jeans looks out at the lit-up city from his balcony. He feels out of place.\nAudio: Distant crackers. Muted celebration.\nDialogue: \"Diwali aa gayi... par feel nahi aa rahi.\"\n\n[0:05 - 0:15]\nVisual: His friend throws a maroon silk kurta at him. He catches it. Cut to: Him walking out wearing it, looking dapper.\nAudio: Swoosh sound. Ethic drum beats kick in instantly.\nDialogue: \"Kapde badlo. Mahual apne aap badal jayega.\"\n\n[0:15 - 0:25]\nVisual: He enters the living room. Elders smile. He touches feet (blessings). Transition to him dancing with sparklers.\nAudio: Full festive track—Upbeat Bollywood + Dhol.\nDialogue: \"Taiyaar hokar aaiye. Tyohaar banakar jaiye.\"\n\n[End Specification]\nVisual: Manyavar Logo.\nDialogue: \"Manyavar. Pehno Apni Pehchan.\""
+        }
+    }
+]
