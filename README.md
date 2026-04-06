@@ -16,6 +16,16 @@ Generate professional TV ads, radio spots, social media reels, and OTT pre-rolls
 
 ---
 
+## Screenshots
+
+<img src="sc1.png">
+
+
+
+
+
+---
+
 ## Setup
 
 ### Prerequisites
